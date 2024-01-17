@@ -18,9 +18,10 @@ void TestFunction(any data) {
 int main() {
     EventListener listener;
     listener.SetFunction(1, TestFunction);
-    listener.RegisterToEventManager();
+    
+    listener.SetFunction(2, TestFunction);
 
-    EventManager::Get().Invoke(1, 100);
+    EventManager::Get().Invoke(2, 200);
 
     return 0;
 }
